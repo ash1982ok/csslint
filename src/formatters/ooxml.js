@@ -6,7 +6,7 @@ CSSLint.addFormatter({
 
     /** 
      * Return content to be printed before all file results.
-     * @return {String} to prepend before all results
+     * @return {String} to prepend before all results 
      */
     startFormat: function() {
         return '<?xml version="1.0" encoding="UTF-8" ?>' +
