@@ -4,7 +4,7 @@ CSSLint.addFormatter({
     id: "ooxml",
     name: "Open Office XML format",
 
-    /**
+    /** 
      * Return content to be printed before all file results.
      * @return {String} to prepend before all results
      */
