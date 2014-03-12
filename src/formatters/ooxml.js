@@ -2,7 +2,7 @@
 CSSLint.addFormatter({
     //format information
     id: "ooxml",
-    name: "Open Office XML format",
+    name: "Open Office XML format", 
 
     /** 
      * Return content to be printed before all file results.
@@ -122,7 +122,7 @@ CSSLint.addFormatter({
                        '<Interior ss:Color="#F4F9B1" ss:Pattern="Solid"/>'+
                        '</Style>'+
                        '</Styles>' +
-                       '"<ss:Worksheet ss:Name="CSSLintResult"><Table ss:StyleID="ta1"><Column ss:AutoFitWidth="1" ss:Width="150" ss:StyleID="Default" /><Column ss:AutoFitWidth="1" ss:Width="150" ss:StyleID="Default" ss:Span="254" />';
+                       '<ss:Worksheet ss:Name="CSSLintResult"><Table ss:StyleID="ta1"><Column ss:AutoFitWidth="1" ss:Width="150" ss:StyleID="Default" /><Column ss:AutoFitWidth="1" ss:Width="150" ss:StyleID="Default" ss:Span="254" />';
     },
 
     /**
@@ -145,21 +145,21 @@ CSSLint.addFormatter({
 
         // private utility functions
 
-        /*function addRow(index,rowdata,sId) {
+        function addRow(index,rowdata,sId) {
              //return '<Row ss:Index="' + index + '">' + rowdata + '</Row>';
              return '<Row ss:StyleID="'+sId+'">' + rowdata + '</Row>';
         }
 
         function addCell(cellData, sId) {
             return  '<Cell ss:StyleID="'+sId+'">' + cellData + '</Cell>';
-        }*/
+        }
 
-        function addRow(index,rowdata) {
+        function addRow1(index,rowdata) {
              //return '<Row ss:Index="' + index + '">' + rowdata + '</Row>';
              return '<Row>' + rowdata + '</Row>';
         }
 
-        function addCell(cellData) {
+        function addCell1(cellData) {
             return  '<Cell>' + cellData + '</Cell>';
         }
 
@@ -168,10 +168,12 @@ CSSLint.addFormatter({
         }
             
          var escapeSpecialCharacters = function(str) {
-            if (!str || str.constructor !== String) {
+            /*if (!str || str.constructor !== String) {
                 return "";
-            }
-            return str.replace(/\"/g, "'").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+            }*/
+            //return str.replace(/&/g, "&amp;").replace(/\"/g, "&quot;").replace(/'/g,"&apos;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); 
+
+            return "<![CDATA[" + str + "]]>";
         };
 
         var messages = results.messages,
@@ -193,7 +195,13 @@ CSSLint.addFormatter({
             shortFilename = filename.substring(pos+1);
         }
 
-        output = addRow(1,addCell(addData("String","Error Type"))+addCell(addData("String","Line No"))+addCell(addData("String","Column No"))+addCell(addData("String","Browsers"))+addCell(addData("String","Evidence"))+addCell(addData("String","Description"))+addCell(addData("String","Rule Name")));
+        output = addRow(1,addCell(addData("String","Error Type"),'s98') +
+                 addCell(addData("String","Line No"),'s98') +
+                 addCell(addData("String","Column No"),'s98') +
+                 addCell(addData("String","Browsers"),'s98') +
+                 addCell(addData("String","Evidence"),'s98') +
+                 addCell(addData("String","Description"),'s98') +
+                 addCell(addData("String","Rule Name"),'s98'),'s99');
 
         CSSLint.Util.forEach(messages, function (message, i) {
           
@@ -212,21 +220,21 @@ CSSLint.addFormatter({
             var info = addData("",escapeSpecialCharacters(message.message));
             var evidence = addData("String",escapeSpecialCharacters(message.evidence));
             var desc = addData("String",escapeSpecialCharacters(message.rule.desc));
-            var name = addData("String",message.rule.name);
+            var name = addData("String",escapeSpecialCharacters(message.rule.name));
             var col_styleID="s98";
             var row_styleID="s99";
             //var cellWrapper = addCell(error_type)+addCell(line_number)+addCell(col_number)+addCell(browsers)+addCell(text_message)+addCell(evidence)+addCell(desc)+addCell(name);
             
           if("error"==message.type){
-            col_styleID="120";
+            col_styleID="s120";
             row_styleID="s119";
           }
 
-           // var cellWrapper = addCell(error_type,col_styleID)+addCell(line,col_styleID)+addCell(col,col_styleID)+addCell(browsers,col_styleID)+addCell(evidence,col_styleID)+addCell(desc,col_styleID)+addCell(name,col_styleID);
-          var cellWrapper = addCell(error_type)+addCell(line)+addCell(col)+addCell(browsers)+addCell(evidence)+addCell(desc)+addCell(name);
+            var cellWrapper = addCell(error_type,col_styleID)+addCell(line,col_styleID)+addCell(col,col_styleID)+addCell(browsers,col_styleID)+addCell(evidence,col_styleID)+addCell(desc,col_styleID)+addCell(name,col_styleID);
+          //var cellWrapper = addCell(error_type)+addCell(line)+addCell(col)+addCell(browsers)+addCell(evidence)+addCell(desc)+addCell(name);
             //var cellWrapper = addCell(info);//Ashok please check. Not working as a string, generated file not readable by Ms Excel
-            //output = output + addRow((i+1),cellWrapper,row_styleID);
-            output = output + addRow((i+1),cellWrapper);
+            output = output + addRow((i+1),cellWrapper,row_styleID);
+            //output = output + addRow((i+1),cellWrapper);
         });
     
         return output;
