@@ -1,0 +1,231 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>Ashok Kumar</Author>
+  <LastAuthor>Ashok Kumar</LastAuthor>
+  <Created>2014-03-14T14:44:47Z</Created>
+  <Company>Accenture</Company>
+  <Version>14.00</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>7815</WindowHeight>
+  <WindowWidth>19980</WindowWidth>
+  <WindowTopX>240</WindowTopX>
+  <WindowTopY>135</WindowTopY>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s62" ss:Name="Default">
+   <Font ss:FontName="Verdana" x:Family="Swiss"/>
+  </Style>
+  <Style ss:ID="s64" ss:Parent="s62">
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="12"/>
+   <Interior ss:Color="#F2F2F2" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s66" ss:Parent="s62">
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="12" ss:Color="#FFFFFF"
+    ss:Bold="1"/>
+   <Interior ss:Color="#16365C" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s75" ss:Parent="s62">
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="12"/>
+   <Interior ss:Color="#DA9694" ss:Pattern="Solid"/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="CSSLintResults">
+  <Table ss:ExpandedColumnCount="8" ss:ExpandedRowCount="13" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultRowHeight="15">
+   <Column ss:Width="55.5"/>
+   <Column ss:Width="59.25"/>
+   <Column ss:Width="44.25"/>
+   <Column ss:Width="62.25"/>
+   <Column ss:Width="56.25"/>
+   <Column ss:Width="299.25"/>
+   <Column ss:Width="418.5"/>
+   <Column ss:Width="165.75"/>
+   <Row ss:Height="15.75">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">File Name</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">Error Type</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">Line No</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">Column No</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">Browsers</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">Evidence</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">Description</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">Rule Name</Data></Cell>
+   </Row>
+   <Row ss:Height="15.75">
+    <Cell ss:StyleID="s64"><Data ss:Type="String">demo.css</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">warning</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">3</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">1</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">All</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">@import url(&quot;booya.css&quot;) print,screen;&#13;</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Don't use @import, use &lt;link&gt; instead.</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Disallow @import</Data></Cell>
+   </Row>
+   <Row ss:Height="15.75">
+    <Cell ss:StyleID="s64"><Data ss:Type="String">demo.css</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">warning</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">4</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">1</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">All</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">@import &quot;whatup.css&quot; screen;&#13;</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Don't use @import, use &lt;link&gt; instead.</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Disallow @import</Data></Cell>
+   </Row>
+   <Row ss:Height="15.75">
+    <Cell ss:StyleID="s64"><Data ss:Type="String">demo.css</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">warning</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">5</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">1</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">All</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">@import &quot;wicked.css&quot;;&#13;</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Don't use @import, use &lt;link&gt; instead.</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Disallow @import</Data></Cell>
+   </Row>
+   <Row ss:Height="15.75">
+    <Cell ss:StyleID="s64"><Data ss:Type="String">demo.css</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">warning</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">10</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">1</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">All</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">li.inline #foo {&#13;</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Selectors should not contain IDs.</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Disallow IDs in selectors</Data></Cell>
+   </Row>
+   <Row ss:Height="15.75">
+    <Cell ss:StyleID="s64"><Data ss:Type="String">demo.css</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">warning</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">11</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">3</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">IE6,IE7,IE8</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">background: rgba(234, 212, 200, 0.5) url(&quot;something.png&quot;);&#13;</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">For older browsers that don't support RGBA, HSL, or HSLA, provide a fallback color.</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Require fallback colors</Data></Cell>
+   </Row>
+   <Row ss:Height="15.75">
+    <Cell ss:StyleID="s64"><Data ss:Type="String">demo.css</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">warning</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">18</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">1</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">IE6</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">li.last.first {&#13;</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Don't use adjoining classes.</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Disallow adjoining classes</Data></Cell>
+   </Row>
+   <Row ss:Height="15.75">
+    <Cell ss:StyleID="s64"><Data ss:Type="String">demo.css</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">warning</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">18</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">1</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">All</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">li.last.first {&#13;</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Don't use classes or IDs with elements (a.foo or a#foo).</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Disallow overqualified elements</Data></Cell>
+   </Row>
+   <Row ss:Height="15.75">
+    <Cell ss:StyleID="s64"><Data ss:Type="String">demo.css</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">warning</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">18</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">1</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">All</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">li.last.first {&#13;</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Don't use classes or IDs with elements (a.foo or a#foo).</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Disallow overqualified elements</Data></Cell>
+   </Row>
+   <Row ss:Height="15.75">
+    <Cell ss:StyleID="s64"><Data ss:Type="String">demo.css</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">warning</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">20</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">3</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">All</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">  padding-left: 3px !important;&#13;</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Be careful when using !important declaration</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Disallow !important</Data></Cell>
+   </Row>
+   <Row ss:Height="15.75">
+    <Cell ss:StyleID="s64"><Data ss:Type="String">demo.css</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">warning</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">22</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">17</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">All</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">  border-right: 0px;&#13;</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">You don't need to specify units when a value is 0.</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Disallow units for 0 values</Data></Cell>
+   </Row>
+   <Row ss:Height="15.75">
+    <Cell ss:StyleID="s75"><Data ss:Type="String">demo.css</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">error</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">31</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">1</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">All</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">@charset &quot;UTF-8&quot;; &#13;</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">This rule looks for recoverable syntax errors.</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Parsing Errors</Data></Cell>
+   </Row>
+   <Row ss:Height="15.75">
+    <Cell ss:StyleID="s75"><Data ss:Type="String">demo.css</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">error</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">31</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">1</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">All</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">@charset &quot;UTF-8&quot;; &#13;</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">This rule looks for recoverable syntax errors.</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">Parsing Errors</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Selected/>
+   <LeftColumnVisible>4</LeftColumnVisible>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>1</ActiveRow>
+     <ActiveCol>7</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>

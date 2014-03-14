@@ -195,7 +195,8 @@ CSSLint.addFormatter({
             shortFilename = filename.substring(pos+1);
         }
 
-        output = addRow(1,addCell(addData("String","Error Type"),'s98') +
+        output = addRow(1, addCell(addData("String","File Name"),'s98') +
+                 addCell(addData("String","Error Type"),'s98') +
                  addCell(addData("String","Line No"),'s98') +
                  addCell(addData("String","Column No"),'s98') +
                  addCell(addData("String","Browsers"),'s98') +
@@ -212,7 +213,7 @@ CSSLint.addFormatter({
               error_type
             }
           */
-            //var data = addData("String",shortFilename);
+            var fileName = addData("String",shortFilename);
             var error_type = addData("String",escapeSpecialCharacters(message.type));
             var line = addData("String",message.line);
             var col = addData("String",message.col);
@@ -230,7 +231,7 @@ CSSLint.addFormatter({
             row_styleID="s119";
           }
 
-            var cellWrapper = addCell(error_type,col_styleID)+addCell(line,col_styleID)+addCell(col,col_styleID)+addCell(browsers,col_styleID)+addCell(evidence,col_styleID)+addCell(desc,col_styleID)+addCell(name,col_styleID);
+            var cellWrapper =  addCell(fileName,col_styleID)+ addCell(error_type,col_styleID)+addCell(line,col_styleID)+addCell(col,col_styleID)+addCell(browsers,col_styleID)+addCell(evidence,col_styleID)+addCell(desc,col_styleID)+addCell(name,col_styleID);
           //var cellWrapper = addCell(error_type)+addCell(line)+addCell(col)+addCell(browsers)+addCell(evidence)+addCell(desc)+addCell(name);
             //var cellWrapper = addCell(info);//Ashok please check. Not working as a string, generated file not readable by Ms Excel
             output = output + addRow((i+1),cellWrapper,row_styleID);
